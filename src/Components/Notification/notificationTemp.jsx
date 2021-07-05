@@ -17,7 +17,7 @@ const Randstring  = RandomString.generate({
 })
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const NotificationTemp = ({addressFrom,notify_action,notify_content,date,id,notify_from,notify_for,viewed})=>{
   const [userInfo,setUserInfo] = useState([])

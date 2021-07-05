@@ -1,7 +1,7 @@
 import React from 'react'
 import MemoCrd from './memoCrd.jsx'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class PollApp extends React.Component{
   constructor(){
     super()

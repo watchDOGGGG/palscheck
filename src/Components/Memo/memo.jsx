@@ -6,7 +6,7 @@ import PollApp from './memoAp.jsx'
 import Helmet from '../Helmet/helment' 
 const { TabPane } = Tabs;
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Polls extends React.Component{
   constructor(){
     super()

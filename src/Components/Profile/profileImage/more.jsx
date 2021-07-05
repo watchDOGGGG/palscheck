@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReadMoreReact from 'read-more-react';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const AllPhotos = ({photos,About}) =>{
     const [myPhoto,setPhotos] = useState([])
     

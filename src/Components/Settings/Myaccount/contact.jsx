@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import {PhoneOutlined
 } from '@ant-design/icons'
 
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const Phone = ({myData})=>{
     const [phonevalue, setPhoneValue] = useState('')
     const [website, setWebsite] = useState(myData.website)
@@ -13,7 +14,7 @@ const Phone = ({myData})=>{
         const formData = new FormData()
         formData.set('phone',phonevalue)
         formData.set('website',website)
-            const setNum= await fetch('http://localhost:4000/Patch/myProfileBio',{
+            const setNum= await fetch(`${SeverLink}/Patch/myProfileBio`,{
                 method:'PATCH',
                 headers:{token:localStorage.token},
                 body:formData

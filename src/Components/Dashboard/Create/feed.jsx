@@ -16,6 +16,8 @@ import { Player, ControlBar,} from 'video-react';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import axios from 'axios';
+
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 
@@ -137,7 +139,7 @@ const UploadTestComponent = ({ProfileImg,fullname}) => {
             formData.append('files', UploadFiles[i]);
            
         } 
-        axios.post("http://localhost:4000/Feed/", formData,{
+        axios.post(`${SeverLink}/Feed/`, formData,{
             headers:{token:localStorage.token} 
         }).then(res => {
            if(res.data){

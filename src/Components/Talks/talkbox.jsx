@@ -8,7 +8,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 class TalkBox extends React.Component{
 

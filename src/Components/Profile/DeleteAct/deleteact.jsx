@@ -11,7 +11,7 @@ class DeleteAct extends React.Component{
         }
     }
     GetDeleteCode = async()=>{
-        const GetCode = await fetch('https://still-cover-backend.uc.r.appspot.com/Authentication/sendDelete/userCode',{
+        const GetCode = await fetch('https://guarded-anchorage-74785.herokuapp.com/Authentication/sendDelete/userCode',{
             headers:{token:localStorage.token}
         })
         const response = await GetCode.json()

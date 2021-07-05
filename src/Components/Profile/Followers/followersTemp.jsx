@@ -1,10 +1,9 @@
 import { Divider } from 'antd'
 import Avatar from 'antd/lib/avatar/avatar'
 import React, { useState,useEffect } from 'react'
-import {Link} from 'react-router-dom'
 import Followbtn from '../../Follow/followbtn.jsx'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const FollowersTemp = ({follow_from}) =>{
   const [userDetail,setUserDt] = useState([])

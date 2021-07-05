@@ -13,7 +13,7 @@ import { LoadingOutlined,CheckCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const MyProfilebio = ({myData}) => {
     const [country, setCountry] = React.useState('')
     const [names, setNames] = React.useState(myData.fullname)
@@ -75,7 +75,7 @@ const MyProfilebio = ({myData}) => {
         formData.set('address', address)
         formData.set('status', status)
         
-        const UpdateData = await fetch('http://localhost:4000/Patch/myProfileBio', {
+        const UpdateData = await fetch(`${SeverLink}/Patch/myProfileBio`, {
             method: 'PATCH',
             headers: { token: localStorage.token },
             body: formData
@@ -96,7 +96,7 @@ const MyProfilebio = ({myData}) => {
     const setProfileIMg = async()=>{
         const formData = new FormData()
         formData.append('files', ProfilePicture);
-        axios.patch("http://localhost:4000/Patch/myProfileImg", formData,{
+        axios.patch(`${SeverLink}/Patch/myProfileImg`, formData,{
             headers:{token:localStorage.token} 
         }).then(response => {
           if (response.error) {
@@ -112,7 +112,7 @@ const MyProfilebio = ({myData}) => {
     const setCoverIMg = async()=>{
         const formData = new FormData()
         formData.append('files', CoverPicture);
-        axios.patch("http://localhost:4000/Patch/myCoverImg", formData,{
+        axios.patch(`${SeverLink}/Patch/myCoverImg`, formData,{
             headers:{token:localStorage.token} 
         }).then(response => {
           if (response.error) {

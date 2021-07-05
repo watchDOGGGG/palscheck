@@ -4,7 +4,7 @@ import View from './newsFeedView'
 import PayWallView from './newsFeedPaywall'
 import NotificationView from './feedsnipcet'
 import Match from './pals_matchCard'
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const contentStyle = {
   width:'473px'

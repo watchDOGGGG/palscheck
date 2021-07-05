@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const Followbtn =({userid,followtype})=>{
     
     const [btnroute,setbtnroute] = useState(0)

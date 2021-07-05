@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import PersonAddOutlinedIcon from '@material-ui/icons/PersonAddOutlined';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const Followbtn =({userid,followtype,name})=>{
     
     const [btnroute,setbtnroute] = useState(0)

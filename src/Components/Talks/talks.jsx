@@ -7,7 +7,7 @@ import FeedSnipset from '../Newsfeed/Newsfeed/feedsnipcet'
 
 const messagesEndRef = React.createRef()
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Talks extends React.Component{
     constructor(){
         super()

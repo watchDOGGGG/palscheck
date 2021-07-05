@@ -8,7 +8,7 @@ import CommentCrd from './childcommentcrd'
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 class ChildComment extends React.Component{
     constructor(){

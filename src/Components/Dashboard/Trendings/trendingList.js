@@ -3,7 +3,7 @@ import ReadMoreReact from 'read-more-react';
 import RandomString from 'randomstring'
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const randString = RandomString.generate()
 const TrendingList = ({address,id,user}) =>{
 

@@ -6,7 +6,7 @@ import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import Verify from './verify'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 class Login extends React.Component {
 
@@ -142,7 +142,7 @@ class Login extends React.Component {
                                             {msg}
                                 </span>
                                 }
-                                
+                                <p>Note: this site is on a test run mode all information on this site is for testing purpose and will be deleted after the main site is setup!</p>
                         </div>
                    
                     :route === 0?
@@ -158,8 +158,8 @@ class Login extends React.Component {
                             <div className="left-overlay"></div>
                                 <div className="left-effect">
                                 <p>welcome to palscheck</p>
-                                <p>Get connected, share what's new and keep up with trends</p>
-                                <p>Explore the social market to see what's new</p>
+                                <p>Get engage with trends, updates and share your awesome moments with friends, family and fans all over the world</p>
+                                <p>We serve the public needs! </p>
                                 <button class="ghost db center pointer" id="signIn">Sign In</button>
                                </div>
                                 
@@ -169,7 +169,7 @@ class Login extends React.Component {
                                 <div className="right-overlay"></div>
                                <div className="right-effect">
                                <h1 className="white">Palscheck!</h1>
-                                <span className="f3 b w-75">See how people feel about your content!</span>
+                                <span className="f3 b w-75">We connect you round the globe!</span>
                                 <button className="ghost db center pointer" id="signUp">Sign Up</button>
                                </div>
                             </div>

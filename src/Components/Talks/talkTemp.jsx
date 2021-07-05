@@ -1,8 +1,7 @@
 import React,{useState,useEffect,useRef} from 'react'
-import {Avatar} from 'antd';
 import DefaultImage from '../Dashboard/Defaults/defaultImage'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const TalkTemp = ({address,user,txt,date,auth})=>{
 
     const [UserDT,setUserDetails] = useState([])

@@ -7,7 +7,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 
 const localLink = 'http://localhost:4000'
-const SeverLink = 'https://still-cover-backend.uc.r.appspot.com'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const SubBtn =({userid,subsc,fullname})=>{
 
     const [btnroute,setbtnroute] = useState(0)
@@ -31,7 +31,7 @@ const SubBtn =({userid,subsc,fullname})=>{
    
     const subME = async()=>{
         setLoad(true)
-        const sub = await fetch(`${localLink}/PayWall/paywall/subME`,{
+        const sub = await fetch(`${SeverLink}/PayWall/paywall/subME`,{
             method:'POST',
             headers:{"Content-Type":"application/json",token:localStorage.token},
             body:JSON.stringify({
@@ -54,7 +54,7 @@ const SubBtn =({userid,subsc,fullname})=>{
     }
 
     const checkIFsub = async()=>{
-        const Check = await fetch(`${localLink}/PayWall/checkIFsub/subme/${userid}`,{
+        const Check = await fetch(`${SeverLink}/PayWall/checkIFsub/subme/${userid}`,{
             headers:{token:localStorage.token}
         })
         const res = await Check.json()

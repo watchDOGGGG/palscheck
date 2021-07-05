@@ -3,7 +3,7 @@ import Helmet from '../../Helmet/helment'
 import RandomString from 'randomstring'
 import TrendTalks from '../../Dashboard/Trendings/trending'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class TalkStack extends React.Component{
     constructor(){
         super()

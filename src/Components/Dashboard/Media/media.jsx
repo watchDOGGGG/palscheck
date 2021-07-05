@@ -3,7 +3,7 @@ import React from 'react'
 import { Image } from 'antd';
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Gallery extends React.Component{
     constructor(){
         super()

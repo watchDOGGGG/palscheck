@@ -9,7 +9,7 @@ import Followers from '../Followers/followers.jsx'
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import CreateIcon from '@material-ui/icons/Create';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const ProfileCard = ({ fullname, username, profileimg, editroute,id,country,region,status,website }) => {
 

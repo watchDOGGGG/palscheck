@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
-const ServerLink = "http://localhost:4000"
+const ServerLink = "https://guarded-anchorage-74785.herokuapp.com"
 export default function App() {
   const config = {
     public_key: 'FLWPUBK_TEST-c77c92785092dba3e39177fe331850a9-X',

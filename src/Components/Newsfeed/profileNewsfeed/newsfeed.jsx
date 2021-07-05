@@ -7,7 +7,7 @@ import BookMark from '../Bookmark/BookMars/bookmark.jsx'
 
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const antIcon = <LoadingOutlined style={{ fontSize: 40 }} spin />;
 
 
@@ -26,7 +26,7 @@ class NewsFeed extends React.Component{
     }
 
     FetchAllFeed = async()=>{
-        const fetchFeed = await fetch(`http://localhost:4000/Feed/getFeed/${this.props.address}`)
+        const fetchFeed = await fetch(`${SeverLink}/Feed/getFeed/${this.props.address}`)
         const res = await fetchFeed.json()
             if(res.feeds){
                 this.setState({Feeds:res.feeds})

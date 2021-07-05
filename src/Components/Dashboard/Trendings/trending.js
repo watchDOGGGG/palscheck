@@ -3,7 +3,7 @@ import { CommentOutlined} from '@ant-design/icons';
 import '../../Layout/layout.css'
 import TrendingList from './trendingList'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const Trendings =()=>{
 
     const [data,setData] = useState([])

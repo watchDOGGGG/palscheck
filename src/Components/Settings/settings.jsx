@@ -4,6 +4,8 @@ import Personalize from './Personalize/personalize'
 import Myaccount from './Myaccount/settings'
 import PayWall from './Paywall/paywall'
 
+
+const ServerLink = "https://guarded-anchorage-74785.herokuapp.com"
 class Settings extends React.Component{
     constructor(){
         super()
@@ -25,7 +27,7 @@ class Settings extends React.Component{
     }
 
     FetchAllUserData = async()=>{
-        const fetchData = await fetch('http://localhost:4000/Authentication/FetchAll',{
+        const fetchData = await fetch(`${ServerLink}/Authentication/FetchAll`,{
             headers:{token:localStorage.token}
         })
         const res = await fetchData.json()
@@ -35,7 +37,7 @@ class Settings extends React.Component{
     }
 
     CheckPayWallDetails = async()=>{
-        const fetchPaywall = await fetch('http://localhost:4000/PayWall/getUSerPaywallDetails',{
+        const fetchPaywall = await fetch(`${ServerLink}/PayWall/getUSerPaywallDetails`,{
             headers:{token:localStorage.token},
         })
         const res = await fetchPaywall.json()

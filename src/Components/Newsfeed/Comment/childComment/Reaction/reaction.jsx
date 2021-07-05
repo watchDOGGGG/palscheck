@@ -1,7 +1,7 @@
 import React from 'react'
 import {HeartOutlined,HeartFilled} from '@ant-design/icons';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const style = { background: '', padding: '8px 0' };
 class Reaction extends React.Component{
 

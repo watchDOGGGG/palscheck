@@ -1,12 +1,7 @@
 import React from 'react'
 import {Avatar,Menu, Dropdown} from 'antd';
 import '../newsfeed.css'
-import { Row, Col } from 'antd';
 import {LoadingOutlined,EllipsisOutlined,CheckCircleFilled} from '@ant-design/icons';
-import Comments from '../Comment/Comments.jsx'
-import Reaction from '../Reaction/reaction.jsx'
-import BookMarkbtn from '../Bookmark/bookmarkbtn.jsx'
-import Talkbtn from '../../Talks/TalkStack/joinTalk.jsx'
 import Followbtn from '../../Follow/feedFollowbtn'
 import DeleteFeed from '../deleteFeed'
 import ReadMoreReact from 'read-more-react';

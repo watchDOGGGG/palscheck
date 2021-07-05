@@ -3,7 +3,7 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 import React from 'react'
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const DeleteFeed = ({address,posteby}) =>{
   
     const confirm = () =>{

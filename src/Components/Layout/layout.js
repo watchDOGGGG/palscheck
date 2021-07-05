@@ -23,7 +23,7 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import Footer from '../Footer/footer.jsx'
 import TestComponent from '../Test/testcomponent'
 import Payment from '../Settings/Paywall/PaymentSys/payment'
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const StyledApp = styled.div`
 color: ${props=> props.theme.fontColor}
@@ -89,7 +89,7 @@ class LayoutTemp extends React.Component {
         }
     }
     CookiePolicy = () =>{
-        window.location.href = "https://Terms.palscheck.com/cookie-policy"
+        window.location.href = "https://about.palscheck/terms/cookie-policy"
     }
     redirectHome = (route) =>{
         if(route === true){

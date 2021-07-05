@@ -6,7 +6,7 @@ import { DownOutlined,HomeFilled,MessageFilled,BellFilled,MoreOutlined,
     SettingFilled,TeamOutlined,UserOutlined,CreditCardFilled} from '@ant-design/icons';
     
     import { Badge } from 'antd';
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 class NavMenu extends React.Component{
     constructor(){

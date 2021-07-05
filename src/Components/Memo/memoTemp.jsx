@@ -6,7 +6,7 @@ import { LoadingOutlined ,CheckCircleOutlined} from '@ant-design/icons';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const Memotemp = ({txt,from,address,key,view})=>{
 const [userDetails,setUserDt] = useState([])
 const [feedback,setfeedback] = useState([])

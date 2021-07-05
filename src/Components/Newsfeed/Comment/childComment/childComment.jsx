@@ -3,7 +3,7 @@ import { Comment, Avatar } from 'antd';
 import Reaction from './Reaction/reaction.jsx'
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const ChildCommentTmp = ({rpl_id,rpl_txt,comment_id,feed_id,rpl_by,rpl_to,reply_date}) => {
   const [likes, setLikes] = useState(0);

@@ -4,7 +4,7 @@ import SideMenu from '../Dashboard/SideContent/side'
 import Helmet from '../Helmet/helment'
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Home extends React.Component{
     constructor(){
         super()

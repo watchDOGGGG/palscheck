@@ -2,7 +2,7 @@ import React from 'react'
 import BookMarkCrd from './bookmarkCard'
 import {ClearOutlined} from '@ant-design/icons';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class BookMark extends React.Component{
 
     constructor(){

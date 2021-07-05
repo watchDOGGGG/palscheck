@@ -7,7 +7,7 @@ import PhoneInput, {isValidPhoneNumber } from 'react-phone-number-input'
 import Verify from './verify'
 import { Spin, Space } from 'antd';
 
-const localLink = 'http://localhost:4000'
+const localLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 const optionsWithDisabled = [
     { label: 'male', value: 'male' },

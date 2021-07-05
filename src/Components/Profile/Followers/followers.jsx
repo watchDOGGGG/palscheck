@@ -4,7 +4,7 @@ import FollowersTemp from './followersTemp.jsx'
 import Following from './followingTemp.jsx';
 import { Skeleton } from 'antd';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const { TabPane } = Tabs;
 
 class Followers extends React.Component{

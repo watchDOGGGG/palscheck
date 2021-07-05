@@ -4,6 +4,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import BankApi from '../../../Settings/Paywall/bankapi'
 import { useEffect } from 'react';
 
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 const access_token = "sk_test_0d881e69618486a81c0a9b4ac7848d6be947f9c9"
 
@@ -37,7 +38,7 @@ const Withdraw = ({details,phone}) =>{
             setload(false)
         }else{
             //share percentage
-            const sharePen = await fetch(`http://localhost:4000/PayWall/ShareAmount/${amount}`,{
+            const sharePen = await fetch(`${SeverLink}/PayWall/ShareAmount/${amount}`,{
                 headers:{token:localStorage.token}})
             const Pecentageresult = await sharePen.json()
             if(Pecentageresult.data){
@@ -79,7 +80,7 @@ const Withdraw = ({details,phone}) =>{
               
                 if(respond.status == true){
                         
-                    const UpdateWithdrawal = await fetch(`http://localhost:4000/PayWall/initialize_withdrawal/${amount}`,{
+                    const UpdateWithdrawal = await fetch(`${SeverLink}/PayWall/initialize_withdrawal/${amount}`,{
                         headers:{token:localStorage.token},})
                         const Withdrawalres = await UpdateWithdrawal.json()
                         if(Withdrawalres.data){

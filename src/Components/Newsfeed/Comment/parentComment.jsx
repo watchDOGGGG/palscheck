@@ -70,7 +70,7 @@ const ParentComment = ({comment_txt, comment_id,feed_id,comment_by,comment_to,co
   }
 
       const getUserDetails = async()=>{
-        const userDt = await fetch(`http://localhost:4000/Authentication/by_id/${comment_by}`)
+        const userDt = await fetch(`${''}/Authentication/by_id/${comment_by}`)
         const response = await userDt.json()
         if(response.profiler){
           setUserDet(response.profiler)

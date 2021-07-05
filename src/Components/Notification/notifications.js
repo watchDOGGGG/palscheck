@@ -7,7 +7,7 @@ import TalksTrends from '../Dashboard/Trendings/trending'
 import SideMenu from '../Dashboard/SideContent/side'
 
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Notifications extends React.Component{
     constructor(){
         super()

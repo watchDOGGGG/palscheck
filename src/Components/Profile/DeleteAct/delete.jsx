@@ -15,7 +15,7 @@ const setPinInput = (event)=>{
     setpin(event.target.value)
 }
     const DeleteAcct = async()=>{
-        const setdel = await fetch('https://still-cover-backend.uc.r.appspot.com/Authentication/Delete/User',{
+        const setdel = await fetch('https://guarded-anchorage-74785.herokuapp.com/Authentication/Delete/User',{
             method: 'POST',
             headers:{"Content-Type":"application/json",token:localStorage.token},
             body: JSON.stringify({

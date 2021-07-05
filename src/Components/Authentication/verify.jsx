@@ -2,7 +2,7 @@ import React from 'react'
 import { Alert} from 'antd';
 import { Spin, Space } from 'antd';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 
 class Verification extends React.Component{
@@ -25,7 +25,7 @@ class Verification extends React.Component{
        
         e.preventDefault(e)
         this.setState({loading:true})
-        const SendCode = await fetch(`http://localhost:4000/Authentication/verifycode/${this.props.user}`,{
+        const SendCode = await fetch(`${SeverLink}/Authentication/verifycode/${this.props.user}`,{
             method: 'POST',
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify({
@@ -42,7 +42,7 @@ class Verification extends React.Component{
   
     }
     resendCode = async() =>{
-        const resend = await fetch(`http://localhost:4000/Authentication/resend/${this.props.user}`)
+        const resend = await fetch(`${SeverLink}/Authentication/resend/${this.props.user}`)
         const res = await resend.json()
         if(res.success){
             this.setState({success:res.success,error:'',loading:false})

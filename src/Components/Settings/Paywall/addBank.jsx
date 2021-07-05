@@ -1,14 +1,13 @@
 import React from 'react'
 import { Select,DatePicker } from 'antd';
-import TextField from '@material-ui/core/TextField';
 import 'date-fns';
 import { Spin,Alert } from 'antd';
-import { BorderVerticleOutlined, LoadingOutlined } from '@ant-design/icons';
+import {LoadingOutlined } from '@ant-design/icons';
 import BankApi from './bankapi'
 const { Option } = Select;
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-
+const ServerLink = "https://guarded-anchorage-74785.herokuapp.com"
 const AddBankDetails = () =>{
 const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 const [Bankname, setBankname] = React.useState('');
@@ -21,7 +20,6 @@ const [Bvn, setbvn] = React.useState('');
 const [load,setload] = React.useState(false)
 const [error,setError] = React.useState('')
 const [success,setSuccess] = React.useState('')
-
 function onChangeDate(date, dateString) {
     setSelectedDate(dateString)
   }
@@ -67,7 +65,7 @@ function onChangeDate(date, dateString) {
         }else{
         setError('')
 //   send to backend
-    const senData = await fetch('http://localhost:4000/PayWall/CreatePayAct',{
+    const senData = await fetch(`${ServerLink}/PayWall/CreatePayAct`,{
         method:'POST',
         headers:{"Content-Type":"application/json",token:localStorage.token},
         body:JSON.stringify({

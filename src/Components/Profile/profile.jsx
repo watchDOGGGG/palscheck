@@ -10,7 +10,7 @@ import Helment from '../Helmet/helment'
 import SubBtn from '../Subscribe/subscribebtn'
 import More from './profileImage/more'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 
 class Profile extends React.Component{
     constructor(){

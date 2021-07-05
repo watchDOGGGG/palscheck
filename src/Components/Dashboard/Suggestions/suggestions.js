@@ -5,7 +5,7 @@ import SuggestionList from './suggestionList'
 import { Divider } from 'antd';
 import {UserSwitchOutlined} from '@ant-design/icons';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 class Suggestions extends React.Component{
     constructor(){
         super()

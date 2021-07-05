@@ -3,7 +3,7 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import Flutter from './flutter'
 import Paystack from './paystack'
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const min = 300
 const Payment = ({email}) =>{
 const [route,setRoute] = useState(0)

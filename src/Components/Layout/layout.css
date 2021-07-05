@@ -457,7 +457,7 @@ button.ghost {
 .overlay-right {
 	right: 0;
 	transform: translateX(0);
-	background-image: url('https://storage.googleapis.com/still-cover/developersFolder/palscheck-social.webp');
+	background-image: url('../Authentication/authImg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

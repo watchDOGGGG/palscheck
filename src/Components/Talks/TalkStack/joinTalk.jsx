@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { MessageOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-const SeverLink = 'http://localhost:4000'
+const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const style = {padding: '8px 0' };
 const Talkbtn = ({feed_id,title}) =>{
 

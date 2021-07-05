@@ -3,7 +3,7 @@ import React from 'react';
 
   
   
-  const ServerLink = "http://localhost:4000"
+  const ServerLink = "https://guarded-anchorage-74785.herokuapp.com"
   const Paystack = ({amount,email})=> {
     // you can call this function anything
     const handlePaystackSuccessAction = async(reference) => {
