@@ -158,7 +158,7 @@ class Login extends React.Component {
                             <div className="left-overlay"></div>
                                 <div className="left-effect">
                                 <p>welcome to palscheck</p>
-                                <p>Get engage with trends, updates and share your awesome moments with friends, family and fans all over the world</p>
+                                <p>Share awesome moments with friends, family, fans from all over the world!</p>
                                 <p>We serve the public needs! </p>
                                 <button class="ghost db center pointer" id="signIn">Sign In</button>
                                </div>
