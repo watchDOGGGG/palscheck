@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 export const lightTheme = {
-    body:'#eff4f7',
+    body:'#ececff30',
     fontColor:'#090b0c',
     icons: '#757575',
     newsfeed:'#fff',

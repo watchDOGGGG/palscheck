@@ -20,9 +20,6 @@ const Del = async()=>{
         headers:{token:localStorage.token}
     })
     const result = await DeleteUserFeed.json()
-    if(result.deleted){
-        window.location.href="/"
-    }
    
 }
 return(

@@ -18,13 +18,26 @@ class NewsFeed extends React.Component{
         super()
         this.state = {
             Feeds:0,
+            Auth:0
         }
     }
-
+    componentDidMount(){
+        this.CheckLoginsession()
+    }
     componentDidUpdate(){
         this.FetchAllFeed()
     }
-
+    CheckLoginsession = async () => {
+        const check = await fetch(`${SeverLink}/Authentication/verifyJwt`, {
+            headers:{token:localStorage.token},
+        })
+        const response = await check.json()
+        if (response.true) {
+            this.setState({ Auth: 1 })
+        } else {
+            this.setState({ Auth: 0 })
+        }
+    }
     FetchAllFeed = async()=>{
         const fetchFeed = await fetch(`${SeverLink}/Feed/getFeed/${this.props.address}`)
         const res = await fetchFeed.json()
@@ -35,7 +48,7 @@ class NewsFeed extends React.Component{
             }
     }
     render(){
-        const {Feeds} = this.state
+        const {Feeds,Auth} = this.state
         const {payWallActive,Paywallauthorize} = this.props
         
         return(
@@ -43,7 +56,12 @@ class NewsFeed extends React.Component{
             <article class="newfeed--3-art center pa3 pa4-ns mv3 ba b--black-10">
                 <Tabs defaultActiveKey="1">
                     <TabPane tab={this.props.fullname ? `${this.props.fullname} Feed` : `Feed`} key="1">
-                        <PostPannel  fullname={this.props.fullname} ProfileImg={this.props.ProfileImg}/>
+                        {
+                            Auth === 1?
+                            <PostPannel  fullname={this.props.fullname} ProfileImg={this.props.ProfileImg}/>
+                        :null                  
+                        }
+                        
                         {
                             Feeds === 0 ?
                                 <div className="center tc">

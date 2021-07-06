@@ -36,7 +36,7 @@ class LayoutTemp extends React.Component {
             userID: [],
             isLoading: '',
             isLoggedIn:[],
-            theme: 'dark'
+            theme: 'light'
 
         }
     }

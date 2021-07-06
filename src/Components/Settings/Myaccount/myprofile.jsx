@@ -11,7 +11,6 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import { Spin } from 'antd';
 import { LoadingOutlined,CheckCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
-const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const SeverLink = 'https://guarded-anchorage-74785.herokuapp.com'
 const MyProfilebio = ({myData}) => {
@@ -29,6 +28,7 @@ const MyProfilebio = ({myData}) => {
     const [success, setSuccess] = React.useState(0)
     const [status, setStatus] = React.useState('')
     const [load,setload] = React.useState(false)
+    const [Imgload,setImgload] = React.useState(false)
 
     //changing profile cover art
     const onChangePictureCover = e => {
@@ -94,6 +94,7 @@ const MyProfilebio = ({myData}) => {
     }
 
     const setProfileIMg = async()=>{
+        setImgload(true)
         const formData = new FormData()
         formData.append('files', ProfilePicture);
         axios.patch(`${SeverLink}/Patch/myProfileImg`, formData,{
@@ -102,14 +103,17 @@ const MyProfilebio = ({myData}) => {
           if (response.error) {
             setError(response.error)
             setSuccess(0)
+            setImgload(false)
         } else {
-            setSuccess(1)
+            setSuccess(response.data)
             setError('')
+            setImgload(false)
         }
         })
   
     }
     const setCoverIMg = async()=>{
+        setImgload(true)
         const formData = new FormData()
         formData.append('files', CoverPicture);
         axios.patch(`${SeverLink}/Patch/myCoverImg`, formData,{
@@ -118,10 +122,12 @@ const MyProfilebio = ({myData}) => {
           if (response.error) {
             setError(response.error)
             setSuccess(0)
+            setImgload(false)
         } else {
-            setSuccess(1)
+            setSuccess(response.data)
             setError('')
             setPicture([])
+            setImgload(false)
         }
         })
     }
@@ -160,7 +166,7 @@ const MyProfilebio = ({myData}) => {
                                         success === 1 ?
                                             <code className="tl f3 green fw1 pointer flex"><CheckCircleOutlineIcon /><span className="f6 ml1"><CheckCircleOutlined />saved</span></code>
                                             :
-                                            <code className="tl f3 blue fw1 pointer flex" onClick={setCoverIMg}><span className="f6 ml1">save</span></code>
+                                            <code className="tl f3 blue fw1 pointer flex" onClick={setCoverIMg}><span className="f6 ml1">{load === true?<Spin/>:<span>Update</span>}</span></code>
                                     }
                                     
                                     <code className="tr f3 blue absolute pcc pointer" onClick={clearCoverImg}><CancelIcon/></code>
@@ -186,7 +192,7 @@ const MyProfilebio = ({myData}) => {
                                         success === 1 ?
                                             <code className="tl f3 green fw1 pointer flex"><span className="f6 ml1"><CheckCircleOutlined />saved</span></code>
                                             :
-                                            <code className="tl f3 blue fw1 pointer flex" onClick={setProfileIMg}><CheckCircleOutlineIcon /><span className="f6 ml1">save</span></code>
+                                            <code className="tl f3 blue fw1 pointer flex" onClick={setProfileIMg}><CheckCircleOutlineIcon /><span className="f6 ml1">{load === true?<Spin/>:<span>Update</span>}</span></code>
                                     }
                                    
                                     <code className="tr f3 blue fw1 absolute ppc pointer" onClick={clearProfileIMg}><CancelIcon/></code>
@@ -256,7 +262,7 @@ const MyProfilebio = ({myData}) => {
                     success === 1 ?
                     <a class="ml4 mt1 f5 link br-pill bg-light-blue ph3 pv2 dib fw6 white dib tc" onClick={onFinish}><CheckCircleOutlined />saved</a>
                         :
-                        <a class="ml4 mt1 f5 link br-pill bg-light-blue ph3 pv2 dib fw6 white dib tc" onClick={onFinish}>save</a>
+                        <a class="ml4 mt1 f5 link br-pill bg-light-blue ph3 pv2 dib fw6 white dib tc" onClick={onFinish}>{load === true?<Spin/>:<span>Update</span>}</a>
                 }
 
             </div>
